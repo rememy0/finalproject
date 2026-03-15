@@ -1,7 +1,7 @@
 #include "Game.h"
 
-#include <chrono>
-#include <thread>
+#include <chrono> // chrono is used for measuring the time taken for each frame to maintain a consistent game loop
+#include <thread> // the main thread of execution in the program, which is responsible for running the game loop. By putting this thread to sleep for a certain duration, we can control how often the game updates and renders, ensuring that it runs at a consistent speed regardless of the performance of the underlying hardware.
 
 Game::Game(int width, int height, BoundaryMode mode)
     : m_width(width),
